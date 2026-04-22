@@ -1,0 +1,111 @@
+/* Page background */
+body {
+  background: linear-gradient(135deg, #eef2ff, #e0f2fe);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Heading */
+h1 {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Card styling */
+.card1 {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.card1:hover {
+  transform: translateY(-5px);
+}
+
+/* Input field */
+.addskill input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.addskill input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 5px rgba(37, 99, 235, 0.3);
+}
+
+/* Textarea */
+#skilldes {
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 10px;
+  outline: none;
+  transition: 0.3s;
+}
+
+#skilldes:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 5px rgba(37, 99, 235, 0.3);
+}
+
+/* Add button */
+button.btn-primary {
+  border-radius: 10px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  border: none;
+  transition: 0.3s;
+}
+
+button.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Table styling */
+.table {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Table header */
+.table thead {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: white;
+}
+
+/* Table rows */
+.table tbody tr {
+  transition: 0.2s;
+}
+
+.table tbody tr:hover {
+  background-color: #f1f5f9;
+}
+
+/* Action buttons */
+.btn-danger {
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn-danger:hover {
+  background-color: #dc2626;
+  transform: scale(1.05);
+}
+
+.btn-sm {
+  border-radius: 8px;
+}
+
+/* Empty state */
+td.text-center {
+  padding: 20px;
+  color: #888;
+}
