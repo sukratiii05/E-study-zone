@@ -3,6 +3,7 @@ const express = require('express')
 const User = require('../models/User')
 const routes = express.Router();
 const sendEmail = require('../utils/Email');
+const verifyToken = require('../middleware/verifyToken');
 routes.post('/register', async (req, res) => {
     try {
         const { name, email, password, qualifications, role } = req.body;
@@ -124,7 +125,7 @@ routes.get('/getuser/:id', async (req, res) => {
     }
 })
 // get all users
-routes.get('/getuser', async (req, res) => {
+routes.get('/getuser', verifyToken,async (req, res) => {
     try {
         const data = await User.find({ status: "active" }).lean()
         res.json({ msg: "User fetched.", data: data })
