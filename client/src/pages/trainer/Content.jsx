@@ -10,7 +10,7 @@ const Content = () => {
   });
 
   const handleFetch = async () => {
-    const res = await axios.get(`http://localhost:5001/api/skill/getskill/${userId}`)
+    const res = await axios.get(`https://e-study-zone-1ln1.onrender.com/api/skill/getskill/${userId}`)
     console.log(res.data);
     setData(res.data.data)
 
@@ -30,7 +30,7 @@ const Content = () => {
   }
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await axios.post("http://localhost:5001/api/content/upload", form, {
+    const res = await axios.post("https://e-study-zone-1ln1.onrender.com/content/upload", form, {
       headers: {
         'Content-type': 'multipart/form-data'
       }

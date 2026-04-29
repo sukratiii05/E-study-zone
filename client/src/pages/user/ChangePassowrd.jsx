@@ -16,7 +16,7 @@ const ChangePassword = () => {
     alert("password do not match")
   }
   try{
-    const res=await axios.post(`http://localhost:5001/api/changepassword`)
+    const res=await axios.post(`https://e-study-zone-1ln1.onrender.com/api/changepassword`)
     console.log(res.data)
   }
   catch(error){

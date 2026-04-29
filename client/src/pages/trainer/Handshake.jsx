@@ -11,13 +11,13 @@ const Handshake = () => {
     }
     const handleSubmit = async(e)=>{
         e.preventDefault();
-        const res = await axios.post('http://localhost:5001/api/content/search',form);
+        const res = await axios.post('https://e-study-zone-1ln1.onrender.com/api/content/search',form);
         console.log(res);
         setData(res.data.msg)
 
     }
     const sendRequest=async(e)=>{
-        const res=await axios.post(`http://localhost:5001/api/handshake/request/${e.userId._id}`,request)
+        const res=await axios.post(`https://e-study-zone-1ln1.onrender.com/api/handshake/request/${e.userId._id}`,request)
         console.log(res);
         
     }
@@ -25,12 +25,12 @@ const Handshake = () => {
     //     handleFetch()
     // },[])
     const updateRequest=async(e)=>{
-        const res=await axios.patch(`http://localhost:5001/api/handshake/accept/${e.id}`)
+        const res=await axios.patch(`https://e-study-zone-1ln1.onrender.com/api/handshake/accept/${e.id}`)
         console.log(res);
         handleFetch()
     }
     const rejectRequest=async(e)=>{
-        const res=await axios.patch(`http://localhost:5001/api/handshake/reject/${e.id}`)
+        const res=await axios.patch(`https://e-study-zone-1ln1.onrender.com/api/handshake/reject/${e.id}`)
         console.log(res);
         handleFetch()
     }

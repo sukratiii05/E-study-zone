@@ -5,7 +5,7 @@ const MyContent = () => {
     const [data,setData]=useState([])
     const userId=localStorage.getItem('id')
     const handleFetch=async()=>{
-        const res=await axios.get(`http://localhost:5001/api/content/getcontent${userId}`)
+        const res=await axios.get(`https://e-study-zone-1ln1.onrender.com/api/content/getcontent${userId}`)
         console.log(res);
         setData(res.data)
         

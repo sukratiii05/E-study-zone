@@ -16,13 +16,13 @@ const AddSkills = () => {
     }
     const handleSubmit = async (e) => {
         e.preventDefault()
-        const res = await axios.post('http://localhost:5001/api/skill/addskill', data)
+        const res = await axios.post('https://e-study-zone-1ln1.onrender.com/api/skill/addskill', data)
         console.log(res);
         alert("Skill addedd successfully")
 
     }
     const handleFetch = async () => {
-        const res = await axios.get(`http://localhost:5001/api/skill/skills/${userId}`)
+        const res = await axios.get(`https://e-study-zone-1ln1.onrender.com/api/skill/skills/${userId}`)
         console.log(res);
 
         setTotalData(res.data)
@@ -38,7 +38,7 @@ const AddSkills = () => {
     }
     const deleteSkill = async (id) => {
         try {
-            await axios.delete(`http://localhost:5001/api/skills/${id}`);
+            await axios.delete(`https://e-study-zone-1ln1.onrender.com/api/skills/${id}`);
             fetchSkills();
 
         } catch (err) {

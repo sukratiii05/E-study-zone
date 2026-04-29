@@ -17,7 +17,7 @@ const TrainerChangePassword = () => {
     console.log("password do not match")
   }
   try{
-    const res =await axios.patch(`http://localhost:5001/api/user/changepassword/${userId}`,data)
+    const res =await axios.patch(`https://e-study-zone-1ln1.onrender.com/api/user/changepassword/${userId}`,data)
     console.log(res.data)
   }
   catch(error){
